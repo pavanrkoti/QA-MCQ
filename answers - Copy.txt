@@ -1,0 +1,81 @@
+1. A – ID is the fastest locator as it is unique.
+
+2. A – driver.get() loads a new web page.
+
+3. A – Page Object Model is a design pattern.
+
+4. B – TestNG allows grouping, dependency, and parameterization.
+
+5. B – Implicit wait is set once for all elements.
+
+6. B – sendKeys() enters text into an input field.
+
+7. A – switchTo().frame() switches to a frame.
+
+8. C – Selenium supports multiple languages, but not every language.
+
+9. C – Actions class handles advanced user interactions.
+
+10. B – Selenium Grid supports parallel execution.
+
+11. B – driver.close() closes current window.
+
+12. A – driver.quit() closes all browser windows.
+
+13. A – WebElement represents an element.
+
+14. C – findElements() returns List<WebElement>.
+
+15. B – getText() fetches element text.
+
+16. B – isDisplayed() checks visibility.
+
+17. B – isEnabled() checks if enabled.
+
+18. A – isSelected() checks checkbox/radio selected.
+
+19. A – driver.manage().timeouts().implicitlyWait() sets implicit wait.
+
+20. C – Explicit wait is WebDriverWait.
+
+21. B – FluentWait allows polling and exceptions.
+
+22. B – ExpectedConditions used with explicit wait.
+
+23. B – By.linkText() locates by link text.
+
+24. C – driver.switchTo().alert() handles alerts.
+
+25. C – accept() accepts alert.
+
+26. C – dismiss() dismisses alert.
+
+27. B – sendKeys() can enter text into alerts.
+
+28. A – getTitle() returns page title.
+
+29. C – navigate().to() navigates to URL.
+
+30. C – navigate().refresh() refreshes page.
+
+31. A – driver.getWindowHandles() returns Set<String>.
+
+32. B – driver.switchTo().window() switches window.
+
+33. A – driver.getWindowHandle() returns String handle.
+
+34. A – frame(int index) switches frame by index.
+
+35. B – frame(String name/id) switches by name/id.
+
+36. C – frame(WebElement) switches by element.
+
+37. B – parentFrame() goes one frame up.
+
+38. C – defaultContent() returns to top-level page.
+
+39. C – driver.switchTo().alert().accept() handles alert.
+
+40. B – driver.manage().window().maximize() maximizes window.
+
+41. A – driver.manage().window().setSize() resizes win

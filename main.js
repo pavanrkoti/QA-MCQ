@@ -9,31 +9,51 @@ app.use(express.json());
 
 // --- Parse Questions ---
 function parseQuestions(text) {
-    const lines = text.split('\n').map(l => l.trim()).filter(l => l.length && !l.startsWith('###'));
+    const lines = text.split('\n').map(l => l.trim());
     const questions = [];
-    let currentQ = '';
+    let currentQ = null;
     let options = [];
 
     lines.forEach(line => {
+        // Skip section headers or decorative markers
+        if (!line || line.startsWith('###') || line.startsWith('---')) return;
+
         const qMatch = line.match(/^(\d+)\.\s*(.*)$/);
         if (qMatch) {
-            if (currentQ) questions.push({ questionText: currentQ, options });
-            currentQ = qMatch[2];
+            // If we were working on a question, push it before starting new one
+            if (currentQ) {
+                questions.push({ questionText: currentQ.trim(), options });
+            }
+            currentQ = qMatch[2].trim();
             options = [];
         } else {
             const oMatch = line.match(/^([A-Da-d])\)\s*(.*)$/);
-            if (oMatch) options.push(line);
-            else currentQ += ' ' + line;
+            if (oMatch) {
+                options.push(line.trim());
+            } else if (currentQ) {
+                // Treat as continuation line for the current question
+                currentQ += ' ' + line;
+            }
         }
     });
-    if (currentQ) questions.push({ questionText: currentQ, options });
 
-    // write log file
-    fs.writeFileSync('questions_log.txt', JSON.stringify(questions, null, 2), 'utf-8');
-    console.log('questions_log.txt created/overwritten');
+    // Push the last question if present
+    if (currentQ) {
+        questions.push({ questionText: currentQ.trim(), options });
+    }
+
+    // Write log file with count
+    try {
+        fs.writeFileSync('questions_log.txt', JSON.stringify(questions, null, 2), 'utf-8');
+        console.log(`questions_log.txt created with ${questions.length} questions`);
+    } catch (err) {
+        console.error('Failed to write questions_log.txt:', err);
+    }
 
     return questions;
 }
+
+
 
 // --- Parse Answers ---
 function parseAnswers(text) {

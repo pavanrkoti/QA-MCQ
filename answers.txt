@@ -1,131 +1,50 @@
-###
-1. B) `getCurrentUrl()`
-2. B) `close()` closes the current window, `quit()` closes all windows and ends session
-3. B) WebDriver directly interacts with the browser without using JavaScript
-4. D) There is no default; it must be set
-5. A) `getPageSource()`
-
-### **Locators & Element Interactions**
-
-6. C) ID
-7. C) XPath is slower and brittle for dynamic elements
-8. A) `checkbox.click()`
-9. C) Both A and B
-10. B) `findElements()`
-
-### **Synchronization (Implicit/Explicit Waits)**
-
-11. A) Implicit wait is applied globally; explicit wait is applied to specific elements
-12. A) `WebDriverWait`
-13. A) `ignoring(NoSuchElementException.class)`
-14. B) Explicit wait
-15. B) `ExpectedConditions.elementToBeClickable(element)`
-
-### **TestNG/JUnit Integration**
-
-16. B) `@BeforeClass`
-17. A) Use `parallel="methods"` or `parallel="classes"` in testng.xml
-18. B) `Assert.assertEquals(actual, expected)`
-19. C) throw SkipException
-20. C) `@AfterClass`
-
-### **Page Object Model & Framework Design**
-
-21. A) Reduces code duplication and improves maintainability
-22. B) In separate Page Classes
-23. B) `PageFactory.initElements(driver, this)`
-24. D) All of the above
-25. B) To handle driver initialization, setup, and teardown
-26. A) To manage multiple browser instances
-27. B) By chaining methods in Page Classes to return new Page Objects
-28. A) Page Classes should focus only on element interactions, not validations
-
-### **Exception Handling & Debugging**
-
-29. A) `NoSuchElementException`
-30. A) Re-locate the element before performing the action
-31. A) `ElementNotInteractableException`
-32. D) `InvalidSessionIdException`
-33. B) Implement explicit waits with proper ExpectedConditions
-34. A) Use `driver.getScreenshotAs()` in `@AfterMethod` with ITestResult check
-35. B) To track test execution flow and exceptions
-36. B) Use `try-catch-finally` and proper logging
-
-### **Handling Alerts, Frames, Windows, and Dropdowns**
-
-37. A) `driver.switchTo().alert()`
-38. A) `alert.accept()`
-39. A) `driver.switchTo().frame(index)`
-40. D) All of the above
-41. A) `driver.switchTo().defaultContent()`
-42. D) All of the above
-43. B) Throws `NoAlertPresentException`
-
-### **Advanced Actions (Actions class, keyboard/mouse events)**
-
-44. B) `Actions`
-45. A) `actions.doubleClick(element).perform()`
-46. D) Both A and C
-47. A) `element.sendKeys(Keys.ENTER)`
-48. A) `actions.contextClick(element).perform()`
-
-### **Selenium Grid & Parallel Execution**
-
-49. B) To execute tests on multiple browsers, OS, and machines in parallel
-50. A) Hub
-51. A) Using `DesiredCapabilities`
-52. D) All of the above
-53. B) Tests may interfere if using the same WebDriver instance
-54. D) All of the above
-55. A) testng.xml
-56. A) By registering nodes with different browser versions
-
-### **Real-world Project Scenarios (Dynamic Elements, Flaky Tests)**
-
-57. A) XPath using `contains()` or `starts-with()`
-58. B) Use explicit wait with `elementToBeClickable`
-59. D) All of the above
-60. D) Both B and C
-61. D) All of the above
-62. D) All of the above
-63. D) All of the above
-64. D) Both B and C
-65. D) All of the above
-66. D) All of the above
-67. D) All of the above
-68. D) All of the above
-69. D) Both A and C
-70. D) All of the above
-
-### **Advanced Selenium Techniques**
-
-71. A) `Actions.contextClick(element).perform()` and then locate menu item
-72. A) Get all window handles and switch to the last one in the set
-73. A) `Actions.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform()`
-74. D) All of the above
-75. A) `JavascriptExecutor js = (JavascriptExecutor) driver; js.executeScript("script")`
-76. D) Both A and B
-77. A) `element.isEnabled()`
-78. D) All of the above
-79. D) All of the above
-80. A) Create separate `Actions` sequences for each action and perform
-81. D) All of the above
-82. D) Both A and B
-83. D) All of the above
-84. D) All of the above
-85. A) Implement `IRetryAnalyzer` interface
-86. D) All of the above
-87. D) All of the above
-88. D) All of the above
-89. A) Use JavaScript Executor to access shadowRoot
-90. D) All of the above
-91. A) Use Actions class with contextClick, moveToElement, and sendKeys
-92. D) All of the above
-93. D) All of the above
-94. A) Use Selenium Grid or cloud services like BrowserStack/Sauce Labs
-95. A) Switch sequentially using `driver.switchTo().frame()`
-96. D) All of the above
-97. D) All of the above
-98. D) All of the above
-99. D) All of the above
-100. D) All of the above
+1. B) `getCurrentUrl()` – Returns the URL of the current page. `getTitle()` returns the page title instead.
+2. B) `driver.quit()` – `close()` closes the current window, while `quit()` closes all windows and ends the session.
+3. B) WebDriver directly interacts with the browser without using JavaScript – Unlike Selenium RC, WebDriver communicates directly with the browser.
+4. D) There is no default; it must be set – Selenium does not set implicit waits automatically.
+5. A) `getPageSource()` – Retrieves the HTML source of the current page.
+6. C) ID – Locating elements by ID is fastest because it is unique and indexed.
+7. C) XPath is slower and brittle for dynamic elements – XPath can break if the page structure changes.
+8. A) `checkbox.click()` – Clicks the checkbox if it is not already selected.
+9. C) Both A and B – `contains()` in XPath and `^=` or `$=` in CSS allow partial matches.
+10. B) `findElements()` – Returns a list of matching elements; `findElement()` returns only the first match.
+11. A) Implicit wait is applied globally; explicit wait is applied to specific elements – Explicit waits target conditions on specific elements.
+12. A) `WebDriverWait` – Used in combination with `ExpectedConditions` to implement explicit waits.
+13. A) `ignoring(NoSuchElementException.class)` – Allows ignoring exceptions while waiting in explicit waits.
+14. B) Explicit wait – Recommended for dynamically loaded content to wait for specific conditions.
+15. B) `ExpectedConditions.elementToBeClickable(element)` – Waits until the element is clickable.
+16. B) `@BeforeClass` – Runs before all tests in a class.
+17. A) Use `parallel="methods"` or `parallel="classes"` in testng.xml – TestNG handles parallel execution using this configuration.
+18. B) `Assert.assertEquals(actual, expected)` – Correct method for asserting equality in TestNG.
+19. C) throw SkipException – Skips a test conditionally in TestNG.
+20. C) `@AfterClass` – Runs after all tests in a class.
+21. B) `@BeforeTest` – Runs before any test belonging to the `<test>` tag in testng.xml.
+22. D) `@AfterSuite` – Runs after all tests in the suite have completed.
+23. A) `@BeforeMethod` – Runs before each test method.
+24. B) `@AfterMethod` – Runs after each test method.
+25. A) `assertTrue(condition)` – Asserts that a condition is true.
+26. B) `assertFalse(condition)` – Asserts that a condition is false.
+27. D) `@DataProvider` – Provides data for test methods.
+28. A) `@Factory` – Used to create instances of test classes dynamically.
+29. C) Use `dependsOnMethods` – Specifies that a test method depends on another method.
+30. B) Use `priority` – Specifies the order of test execution in TestNG.
+31. A) Selenium IDE – Tool for record-and-playback testing.
+32. C) Selenium WebDriver – Tool for writing code-based automated tests.
+33. B) Selenium Grid – Tool for distributed test execution.
+34. A) ChromeDriver, GeckoDriver – WebDriver implementations for specific browsers.
+35. B) XPath, CSS Selector – Most commonly used locators in Selenium.
+36. D) Tag Name – Less commonly used locator, only for simple elements.
+37. B) Actions class – Used to handle advanced user interactions.
+38. C) Robot class – Handles OS-level events like file uploads.
+39. A) JavascriptExecutor – Executes JavaScript in the browser context.
+40. B) Alert interface – Handles alerts, prompts, and confirmation dialogs.
+41. D) Window handles – Used to switch between multiple windows or tabs.
+42. C) Frame switching – `driver.switchTo().frame()` switches to a frame.
+43. B) `ThreadLocal<WebDriver>` – Ensures thread safety for parallel execution.
+44. A) DesiredCapabilities – Used to specify browser capabilities in Grid.
+45. B) Hub – Central server that manages Grid nodes.
+46. C) Node – Executes tests based on Hub instructions.
+47. D) Registry – Not directly used in Selenium; Hub and Nodes manage communication.
+48. B) Execute tests in parallel – Main purpose of Selenium Grid.
+49. B) Hub – Acts as the central point to manage nodes.
+50. A) Using DesiredCapabilities – Specifies which browser/version a node should run.

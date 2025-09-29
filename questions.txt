@@ -1,436 +1,615 @@
-1. Which WebDriver method is used to fetch the current URL of the page?
-   A) `getTitle()`
-   B) `getCurrentUrl()`
-   C) `getPageSource()`
-   D) `navigate().to()`
+1. Which WebDriver method is used to navigate to a URL?
+   A) get()
+   B) goTo()
+   C) navigate()
+   D) open()
 
-2. What is the difference between `driver.close()` and `driver.quit()`?
-   A) `close()` closes all windows, `quit()` closes only current window
-   B) `close()` closes the current window, `quit()` closes all windows and ends session
-   C) Both are the same
-   D) `quit()` only clears cookies
+2. Which of the following is not a WebDriver locator strategy?
+   A) By.id
+   B) By.linkText
+   C) By.classValue
+   D) By.cssSelector
 
-3. Which of the following statements is true about WebDriver?
-   A) WebDriver can handle AJAX elements implicitly
-   B) WebDriver directly interacts with the browser without using JavaScript
-   C) WebDriver cannot interact with multiple windows
-   D) WebDriver always requires Selenium Grid
+3. What does the `driver.quit()` command do in Selenium?
+   A) Closes current tab only
+   B) Closes the browser and ends session
+   C) Refreshes the browser
+   D) Logs out user
 
-4. What is the default timeout for implicit waits in Selenium?
-   A) 0 seconds
-   B) 10 seconds
-   C) 5 seconds
-   D) There is no default; it must be set
+4. What is the default polling time for WebDriverWait in Selenium?
+   A) 250 milliseconds
+   B) 500 milliseconds
+   C) 1 second
+   D) 2 seconds
 
-5. Which command will retrieve the page source of the current page?
-   A) `getPageSource()`
-   B) `getCurrentPage()`
-   C) `getSource()`
-   D) `getHTML()`
+5. Which interface does WebDriver extend?
+   A) SearchContext
+   B) WebElement
+   C) RemoteWebDriver
+   D) EventFiringWebDriver
 
-6. Which of the following is the fastest locator in Selenium?
-   A) CSS Selector
-   B) XPath
-   C) ID
-   D) Class Name
+6. Which of the following is true about `findElement`?
+   A) Returns list of matching elements
+   B) Throws `NoSuchElementException` if not found
+   C) Returns null if element missing
+   D) Waits indefinitely
 
-7. What is the major disadvantage of using XPath in Selenium?
-   A) It is not supported in Chrome
-   B) It cannot locate elements inside frames
-   C) XPath is slower and brittle for dynamic elements
-   D) It only works with text nodes
+7. Which Selenium class supports taking screenshots?
+   A) Screenshot
+   B) TakesScreenshot
+   C) CaptureScreen
+   D) ScreenShotDriver
 
-8. How can you select a checkbox if it is not already selected?
-   A) `checkbox.click()`
-   B) `checkbox.isSelected()`
-   C) `checkbox.getText()`
-   D) `checkbox.select()`
+8. In Page Object Model (POM), which of the following is correct?
+   A) Each test case has hardcoded locators
+   B) Pages and locators are separated from test logic
+   C) Test methods include all page logic
+   D) Not supported in Selenium
 
-9. Which locator can be used to find an element with a partial match of an attribute?
-   A) XPath with `contains()`
-   B) CSS Selector with `^=` or `$=`
-   C) Both A and B
-   D) None of the above
+9. Which TestNG annotation is executed before any test method in a class?
+   A) @BeforeTest
+   B) @BeforeClass
+   C) @BeforeMethod
+   D) @BeforeSuite
 
-10. To find all matching elements on a page, which WebDriver method should be used?
-    A) `findElement()`
-    B) `findElements()`
-    C) `getElements()`
-    D) `fetchElements()`
+10. Which command is used to simulate pressing Enter in Selenium?
+    A) Keys.ENTER
+    B) Keys.RETURN
+    C) sendKeys("\n")
+    D) All of the above
 
-11. What is the difference between implicit and explicit waits?
-    A) Implicit wait is applied globally; explicit wait is applied to specific elements
-    B) Implicit wait waits for conditions; explicit wait waits only for element presence
-    C) Both are global waits
-    D) Explicit wait is faster than implicit wait by default
+---
 
-12. Which class is used to implement explicit waits in Selenium?
-    A) `WebDriverWait`
-    B) `WaitManager`
-    C) `ExpectedCondition`
-    D) `FluentWait`
+11. Implicit wait applies to:
+    A) All elements globally
+    B) Only one findElement call
+    C) Only findElements
+    D) Only explicit wait
 
-13. How can you ignore exceptions while waiting for a condition in explicit wait?
-    A) `ignoring(NoSuchElementException.class)`
-    B) `catch(NoSuchElementException)`
-    C) `try-catch` block only
-    D) Selenium does not support ignoring exceptions
+12. Which WebDriver method is used to switch to an alert?
+    A) driver.handleAlert()
+    B) driver.switchTo().alert()
+    C) driver.getAlert()
+    D) driver.switchAlert()
 
-14. Which wait is recommended for handling dynamically loaded content?
+13. Which of these is true about TestNG parallel execution?
+    A) Runs only sequentially
+    B) Supports parallel at suite, test, class, method levels
+    C) Does not support multi-threading
+    D) Only parallel by method level
+
+14. Which of these is NOT an advantage of TestNG over JUnit?
+    A) Parameterization
+    B) Flexible annotations
+    C) Built-in reports
+    D) WebDriver integration
+
+15. In Selenium Grid, what is a Hub?
+    A) Node executor
+    B) Central server that controls test execution
+    C) Browser instance
+    D) TestNG configuration
+
+16. Which of the following can be used to handle dropdowns in Selenium?
+    A) Select class
+    B) DropdownHandler class
+    C) WebElement.select()
+    D) DropDown class
+
+17. Which is not a valid locator strategy?
+    A) By.partialLinkText
+    B) By.tagName
+    C) By.xpath
+    D) By.value
+
+18. FluentWait differs from WebDriverWait because:
+    A) Allows custom polling interval
+    B) Doesn’t handle exceptions
+    C) Doesn’t accept timeout
+    D) Is synchronous only
+
+19. Which TestNG annotation runs once after all tests in the suite?
+    A) @AfterMethod
+    B) @AfterClass
+    C) @AfterTest
+    D) @AfterSuite
+
+20. Which method is used to clear input fields in Selenium?
+    A) clear()
+    B) reset()
+    C) empty()
+    D) delete()
+
+---
+
+21. Which interface does WebElement extend?
+    A) SearchContext
+    B) Locatable
+    C) Both A and B
+    D) None
+
+22. Which of the following is not a Selenium component?
+    A) WebDriver
+    B) RC
+    C) IDE
+    D) Appium
+
+23. What is returned by driver.findElements() if no match?
+    A) null
+    B) empty list
+    C) exception
+    D) false
+
+24. The default time unit for Thread.sleep() in Java is:
+    A) Seconds
+    B) Milliseconds
+    C) Nanoseconds
+    D) Minutes
+
+25. Which of these allows running Selenium tests in headless mode?
+    A) ChromeOptions
+    B) HtmlUnitDriver
+    C) FirefoxOptions
+    D) All of the above
+
+26. Which WebDriver method fetches current page title?
+    A) driver.pageTitle()
+    B) driver.getTitle()
+    C) driver.title()
+    D) driver.getPageTitle()
+
+27. Which of these waits is not provided by Selenium directly?
     A) Implicit wait
     B) Explicit wait
-    C) Thread.sleep()
-    D) No wait is needed
+    C) Fluent wait
+    D) Hard wait
 
-15. How can you wait for a specific element to be clickable?
-    A) `ExpectedConditions.visibilityOf(element)`
-    B) `ExpectedConditions.elementToBeClickable(element)`
-    C) `ExpectedConditions.presenceOfElementLocated()`
-    D) `ExpectedConditions.textToBePresentInElement()`
+28. Which TestNG feature allows executing same test with different data?
+    A) @Factory
+    B) @DataProvider
+    C) @Parameters
+    D) @Repeat
 
+29. What is the default scope of variables in TestNG XML parameter?
+    A) suite
+    B) test
+    C) class
+    D) method
 
+30. Which locator is most reliable?
+    A) XPath with indexes
+    B) Absolute XPath
+    C) ID
+    D) LinkText
 
-16. Which TestNG annotation is used to run a method before all tests in a class?
-    A) `@BeforeMethod`
-    B) `@BeforeClass`
-    C) `@BeforeTest`
-    D) `@BeforeSuite`
+---
 
-17. How do you run TestNG tests in parallel?
-    A) Use `parallel="methods"` or `parallel="classes"` in testng.xml
-    B) Use `@Parallel` annotation
-    C) Selenium automatically parallelizes tests
-    D) Use `Thread.sleep()`
+31. How to perform double-click in Selenium?
+    A) driver.doubleClick()
+    B) new Actions(driver).doubleClick(element).perform()
+    C) element.doubleClick()
+    D) robot.doubleClick()
 
-18. What is the correct way to assert equality in TestNG?
-    A) `Assert.equals(actual, expected)`
-    B) `Assert.assertEquals(actual, expected)`
-    C) `assert.equal(actual, expected)`
-    D) `Assert.eq(actual, expected)`
+32. Which is NOT part of Actions class?
+    A) dragAndDrop()
+    B) contextClick()
+    C) moveToElement()
+    D) setText()
 
-19. Which TestNG annotation is used to skip a test conditionally?
-    A) `@SkipTest`
-    B) `@Ignore`
-    C) `throw SkipException`
-    D) `@Disabled`
+33. TestNG dependsOnMethods is used to:
+    A) Execute in priority order
+    B) Skip tests unless dependent method passes
+    C) Repeat tests
+    D) Run in parallel
 
-20. How can you ensure a method runs after all tests in a class in TestNG?
-    A) `@AfterTest`
-    B) `@AfterSuite`
-    C) `@AfterClass`
-    D) `@AfterMethod`
+34. Which driver is platform-independent?
+    A) ChromeDriver
+    B) FirefoxDriver
+    C) RemoteWebDriver
+    D) EdgeDriver
 
+35. Which method closes the current tab in WebDriver?
+    A) quit()
+    B) close()
+    C) shutdown()
+    D) exit()
 
+36. PageFactory in Selenium is used for:
+    A) Dynamic waits
+    B) Initializing web elements with @FindBy
+    C) Running parallel tests
+    D) Logging
 
-49. What is the main purpose of Selenium Grid?
-    A) To run tests sequentially on one machine
-    B) To execute tests on multiple browsers, OS, and machines in parallel
-    C) To debug WebDriver scripts
-    D) To generate test reports automatically
+37. In TestNG, which annotation will skip execution if enabled=false?
+    A) @Test(enabled=false)
+    B) @Ignore
+    C) @Disabled
+    D) @Skip
 
-50. Which component of Selenium Grid acts as a central point to manage nodes?
-    A) Hub
-    B) Node
-    C) Registry
-    D) Server
+38. Which of the following is used for continuous integration with Selenium?
+    A) Jenkins
+    B) JIRA
+    C) TestNG
+    D) Appium
 
-51. How can you specify which browser a node should run on in Selenium Grid?
-    A) Using `DesiredCapabilities`
-    B) Using `WebDriverWait`
-    C) Using `Actions` class
-    D) Using TestNG annotations
+39. Which annotation in TestNG executes once before all suites?
+    A) @BeforeSuite
+    B) @BeforeTest
+    C) @BeforeClass
+    D) @BeforeMethod
 
-52. Which of the following statements is true for parallel execution in TestNG?
-    A) `parallel="tests"` runs multiple classes in parallel
-    B) `parallel="methods"` runs multiple test methods in parallel
-    C) `parallel="classes"` runs multiple classes in parallel
+40. Which of the following is NOT a WebDriver exception?
+    A) NoSuchElementException
+    B) TimeoutException
+    C) SQLException
+    D) ElementNotVisibleException
+
+---
+
+41. Which language is NOT supported by Selenium WebDriver?
+    A) Java
+    B) Python
+    C) Ruby
+    D) C
+
+42. Which TestNG annotation is used for parameterization via XML?
+    A) @Parameters
+    B) @DataProvider
+    C) @Factory
+    D) @ValueSource
+
+43. What is the return type of getWindowHandles()?
+    A) List<String>
+    B) Set<String>
+    C) Map<String, Window>
+    D) Array<String>
+
+44. Which of the following can simulate keyboard/mouse events?
+    A) Actions class
+    B) Robot class
+    C) JavascriptExecutor
+    D) Both A and B
+
+45. Which is not a feature of Selenium Grid?
+    A) Parallel execution
+    B) Cross-browser testing
+    C) Mobile automation
+    D) Distributed execution
+
+46. Which of these methods is not in WebDriver interface?
+    A) get()
+    B) navigate()
+    C) manage()
+    D) setText()
+
+47. In Selenium, isDisplayed() returns:
+    A) true if visible
+    B) false if hidden
+    C) exception if not present
     D) All of the above
 
-53. What is a common issue when running Selenium tests in parallel?
-    A) Element locators fail due to dynamic content
-    B) Tests may interfere if using the same WebDriver instance
-    C) Implicit waits fail
-    D) Alerts are ignored automatically
+48. Which command refreshes the current page?
+    A) driver.refresh()
+    B) driver.navigate().refresh()
+    C) driver.reload()
+    D) driver.restart()
 
-54. How can you avoid WebDriver instance conflicts in parallel execution?
-    A) Use separate WebDriver instances for each thread
-    B) Use `ThreadLocal<WebDriver>`
-    C) Initialize WebDriver in `@BeforeMethod`
+49. Which of these cannot locate shadow DOM elements?
+    A) By.cssSelector
+    B) By.id
+    C) executeScript with shadowRoot
+    D) WebDriver native
+
+50. Which of these can execute JavaScript in Selenium?
+    A) JavascriptExecutor
+    B) Actions
+    C) Robot
+    D) WebElement
+
+51. Which locator is fastest in Selenium?
+    A) ID
+    B) CSS Selector
+    C) XPath
+    D) Name
+
+52. Which Selenium version removed RC support?
+    A) 2
+    B) 3
+    C) 4
+    D) None
+
+53. Which WebDriver method returns current URL?
+    A) getPageSource()
+    B) getCurrentUrl()
+    C) getUrl()
+    D) fetchUrl()
+
+54. Which of the following is NOT true about implicit waits?
+    A) Applied globally
+    B) Stops immediately when element found
+    C) Can be overridden by explicit wait
+    D) Throws TimeoutException
+
+55. How to handle multiple windows in WebDriver?
+    A) driver.switchTo().window(handle)
+    B) driver.windowSwitch(handle)
+    C) driver.selectWindow(handle)
+    D) driver.chooseWindow(handle)
+
+56. Which TestNG annotation is executed after each test method?
+    A) @AfterSuite
+    B) @AfterMethod
+    C) @AfterClass
+    D) @AfterTest
+
+57. Which of the following is NOT a synchronization technique?
+    A) Implicit wait
+    B) Thread.sleep()
+    C) Explicit wait
+    D) Hardcode locator
+
+58. Which of these is NOT a browser supported by Selenium officially?
+    A) Chrome
+    B) Safari
+    C) IE
+    D) Opera
+
+59. Which of the following allows remote execution?
+    A) Selenium Grid
+    B) Selenium IDE
+    C) Selenium RC
+    D) None
+
+60. Which TestNG annotation is executed before test methods in a class?
+    A) @BeforeClass
+    B) @BeforeTest
+    C) @BeforeMethod
+    D) @BeforeSuite
+
+---
+
+61. Which is NOT true about WebDriver?
+    A) Supports multiple languages
+    B) Controls browsers natively
+    C) Needs browser-specific drivers
+    D) Can automate desktop apps
+
+62. Which is NOT a valid WebDriver command?
+    A) driver.findElement()
+    B) driver.manage()
+    C) driver.executeScript()
+    D) driver.click()
+
+63. Which of the following locators should be avoided?
+    A) ID
+    B) CSS Selector
+    C) Absolute XPath
+    D) Name
+
+64. Which TestNG annotation executes only once before all tests in XML <test> tag?
+    A) @BeforeSuite
+    B) @BeforeTest
+    C) @BeforeClass
+    D) @BeforeMethod
+
+65. Which return type does findElement() have?
+    A) WebElement
+    B) List<WebElement>
+    C) Set<WebElement>
+    D) void
+
+66. Which method is used to maximize browser?
+    A) driver.maximize()
+    B) driver.manage().window().maximize()
+    C) driver.fullscreen()
+    D) driver.openMax()
+
+67. Which WebDriver method navigates back?
+    A) driver.back()
+    B) driver.navigate().back()
+    C) driver.goBack()
+    D) driver.window().back()
+
+68. Which is NOT a WebDriver wait class?
+    A) WebDriverWait
+    B) FluentWait
+    C) ExpectedConditions
+    D) HardWait
+
+69. Which of these tools manages test execution reports?
+    A) TestNG
+    B) Maven Surefire
+    C) Extent Reports
     D) All of the above
 
-55. Which file is typically used to configure parallel execution in TestNG?
-    A) testng.xml
-    B) pom.xml
-    C) selenium-config.xml
-    D) grid-config.xml
+70. Which WebDriver method fetches page source?
+    A) getHTML()
+    B) getPageSource()
+    C) fetchHTML()
+    D) source()
 
-56. How can you run Selenium tests on multiple browser versions using Grid?
-    A) By registering nodes with different browser versions
-    B) By changing the WebDriver version in the code
-    C) By using Thread.sleep()
-    D) Selenium automatically detects browser versions
+---
 
+71. Which method is used to submit a form?
+    A) element.submit()
+    B) driver.submit()
+    C) form.send()
+    D) element.click()
 
-57. A button on the page has a dynamic ID that changes every refresh. Which locator is most reliable?
-    A) XPath using `contains()` or `starts-with()`
-    B) CSS Selector with exact ID
-    C) Class name
-    D) Tag name
+72. Which of the following is NOT a capability of WebDriver?
+    A) Handle popups
+    B) Handle desktop notifications
+    C) Handle multiple tabs
+    D) Handle alerts
 
-58. A test fails intermittently because the element is not interactable immediately. What is the best solution?
-    A) Use `Thread.sleep(5000)`
-    B) Use explicit wait with `elementToBeClickable`
-    C) Use implicit wait
-    D) Ignore the failure
+73. Which driver can be used without an actual browser?
+    A) HtmlUnitDriver
+    B) ChromeDriver
+    C) EdgeDriver
+    D) SafariDriver
 
-59. While handling a modal popup, the test sometimes throws `NoSuchElementException`. What can you do?
-    A) Add an explicit wait for the popup
-    B) Switch to the modal frame if needed
-    C) Ensure the element locator is correct
+74. What is the return type of driver.getWindowHandle()?
+    A) String
+    B) List<String>
+    C) Set<String>
+    D) Map<String,String>
+
+75. Which of the following is NOT a way to locate elements?
+    A) By.name
+    B) By.title
+    C) By.cssSelector
+    D) By.linkText
+
+76. Which of the following is NOT supported in Selenium?
+    A) File upload
+    B) Capturing screenshots
+    C) Capturing video natively
+    D) Handling iframes
+
+77. Which is NOT a TestNG assertion?
+    A) assertEquals
+    B) assertTrue
+    C) assertContains
+    D) assertNull
+
+78. What is the advantage of Page Object Model?
+    A) Reduces code duplication
+    B) Improves readability
+    C) Separates test logic and locators
     D) All of the above
 
-60. You are automating a table where rows are generated dynamically. How can you click a specific row?
-    A) Locate the row using XPath with dynamic index
-    B) Iterate through all rows and match cell text
-    C) Use JavaScript Executor to click
-    D) Both B and C
-
-61. A test fails on CI server but passes locally. What could be the reason?
-    A) Differences in browser versions
-    B) Timing issues and environment differences
-    C) Missing resources or configurations on CI
-    D) All of the above
-
-62. How can you handle elements that appear after scrolling?
-    A) Use `Actions.moveToElement()`
-    B) Use JavaScript `scrollIntoView()`
-    C) Wait for element to be visible after scroll
-    D) All of the above
-
-63. Your test needs to interact with a dynamically loaded dropdown. What is the best approach?
-    A) Use explicit wait for dropdown options
-    B) Click the dropdown, wait, then select the option
-    C) Use JavaScript Executor if standard click fails
-    D) All of the above
-
-64. How do you deal with flaky tests caused by network delays in AJAX-heavy pages?
-    A) Increase implicit wait
-    B) Implement robust explicit waits for AJAX completion
-    C) Retry tests automatically
-    D) Both B and C
-
-65. An element is present in the DOM but Selenium throws `ElementClickInterceptedException`. What is the solution?
-    A) Use `Actions.moveToElement()` before clicking
-    B) Ensure no overlay or popup blocks the element
-    C) Use JavaScript Executor click
-    D) All of the above
-
-66. How can you validate a tooltip text that appears on hover?
-    A) Use `Actions.moveToElement()` to hover
-    B) Get `title` attribute or visible tooltip text
-    C) Use explicit wait if tooltip is dynamic
-    D) All of the above
-
-67. While automating file upload, standard `sendKeys()` doesn’t work. What can you do?
-    A) Use Robot class to handle OS-level file dialog
-    B) Use JavaScript Executor
-    C) Use AutoIT or similar tool
-    D) All of the above
-
-68. A test must handle a CAPTCHA. How can you approach it?
-    A) Skip CAPTCHA in automated tests
-    B) Use third-party CAPTCHA solving service
-    C) Mock the CAPTCHA in test environment
-    D) All of the above
-
-69. Your test needs to capture a screenshot of a specific element, not the full page. How can you do it?
-    A) Use `element.getScreenshotAs()`
-    B) Use JavaScript Executor
-    C) Crop full-page screenshot using image library
+79. Which of these can simulate drag and drop?
+    A) Actions class
+    B) JavascriptExecutor
+    C) Robot class
     D) Both A and C
 
-70. Which approach helps reduce flaky tests in Selenium frameworks?
-    A) Avoid using Thread.sleep()
-    B) Implement proper waits
-    C) Use Page Object Model
-    D) All of the above
+80. Which of the following can be used for Maven dependencies in Selenium?
+    A) pom.xml
+    B) build.gradle
+    C) testng.xml
+    D) settings.xml
 
-71. How can you perform a right-click and select an option from the context menu?
-    A) `Actions.contextClick(element).perform()` and then locate menu item
-    B) Use JavaScript Executor only
-    C) Use `driver.rightClick()`
-    D) Not possible in Selenium
+---
 
-72. How can you switch to the last opened window dynamically?
-    A) Get all window handles and switch to the last one in the set
-    B) Use `driver.switchTo().lastWindow()`
-    C) Use `driver.switchTo().window("last")`
-    D) Selenium handles it automatically
+81. Which of these is NOT true about TestNG?
+    A) Supports parallel execution
+    B) Can group test cases
+    C) Supports only Java
+    D) Generates reports
 
-73. How can you perform multiple key presses simultaneously (like CTRL + A)?
-    A) `Actions.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform()`
-    B) `element.sendKeys(Keys.CONTROL + "a")`
-    C) `Robot.keyPress()` only
-    D) Selenium does not support it
+82. Which of the following cannot be automated by Selenium?
+    A) Web apps
+    B) Mobile apps
+    C) Windows desktop apps
+    D) Both B and C
 
-74. A test fails because a new element overlays the expected element. What is the solution?
-    A) Wait for overlay to disappear
-    B) Use `Actions.moveToElement()`
-    C) Use JavaScript click
-    D) All of the above
+83. Which of the following waits retries until condition met?
+    A) Explicit wait
+    B) Implicit wait
+    C) Thread.sleep()
+    D) Hard wait
 
-75. How can you execute JavaScript in Selenium?
-    A) `JavascriptExecutor js = (JavascriptExecutor) driver; js.executeScript("script")`
-    B) `driver.runJS("script")`
-    C) `driver.executeJavaScript("script")`
-    D) Selenium cannot execute JavaScript
+84. Which is the correct syntax for switching to a frame by index?
+    A) driver.switchTo().frame(0)
+    B) driver.switchTo(0)
+    C) driver.frame(0)
+    D) driver.getFrame(0)
 
-76. How can you scroll to the bottom of a page dynamically?
-    A) Use `JavascriptExecutor.scrollTo(0, document.body.scrollHeight)`
-    B) Use `Actions.moveToElement(lastElement)`
-    C) Use `driver.scrollToBottom()`
-    D) Both A and B
+85. Which driver requires Safari’s allow remote automation enabled?
+    A) SafariDriver
+    B) ChromeDriver
+    C) EdgeDriver
+    D) RemoteWebDriver
 
-77. How can you verify if an element is enabled before clicking?
-    A) `element.isEnabled()`
-    B) `element.isDisplayed()`
-    C) `element.isSelected()`
-    D) Selenium clicks anyway
+86. Which WebDriver method deletes all cookies?
+    A) driver.clearCookies()
+    B) driver.deleteAllCookies()
+    C) driver.manage().deleteAllCookies()
+    D) driver.removeCookies()
 
-78. How do you handle dynamically generated checkboxes with the same class name?
-    A) Use XPath with index or attribute filters
-    B) Iterate through all elements returned by `findElements()`
-    C) Use JavaScript Executor
-    D) All of the above
+87. Which type of XPath is more stable?
+    A) Absolute XPath
+    B) Relative XPath
+    C) Dynamic XPath with index
+    D) None
 
-79. How can you capture network logs in Selenium?
-    A) Use Chrome DevTools Protocol (CDP)
-    B) Use proxy tools like BrowserMob Proxy
-    C) Use Selenium WebDriver logging
-    D) All of the above
+88. Which is NOT a Maven build lifecycle?
+    A) validate
+    B) compile
+    C) run
+    D) package
 
-80. How can you perform double-click and right-click in the same test?
-    A) Create separate `Actions` sequences for each action and perform
-    B) Selenium cannot combine actions
-    C) Use Robot class only
-    D) Use JavaScript Executor only
+89. Which Selenium method handles JavaScript alerts?
+    A) driver.switchTo().alert()
+    B) driver.alert()
+    C) driver.handleAlert()
+    D) driver.manage().alert()
 
-81. How can you validate dynamic text changes on a page?
-    A) Use explicit wait with `textToBePresentInElement`
-    B) Poll element text periodically
-    C) Use JavaScript Executor to fetch inner text
-    D) All of the above
+90. Which method returns true if element is enabled?
+    A) isEnabled()
+    B) isActive()
+    C) isClickable()
+    D) isPresent()
 
-82. How can you wait for AJAX calls to complete?
-    A) Poll `jQuery.active` using JavaScript Executor
-    B) Use explicit waits for expected elements after AJAX
-    C) Use Thread.sleep()
-    D) Both A and B
+---
 
-83. How can you handle dynamic tables with changing rows and columns?
-    A) Locate table rows dynamically with XPath
-    B) Iterate through rows and columns to match required data
-    C) Use JavaScript Executor if needed
-    D) All of the above
+91. Which WebDriver method deletes a specific cookie?
+    A) driver.manage().deleteCookieNamed("name")
+    B) driver.deleteCookie("name")
+    C) driver.removeCookie("name")
+    D) driver.delete("cookie")
 
-84. How can you handle hidden elements that appear on hover?
-    A) Use `Actions.moveToElement()`
-    B) Use JavaScript to make element visible
-    C) Wait explicitly for element to appear
-    D) All of the above
+92. Which tool is commonly integrated with Selenium for BDD?
+    A) TestNG
+    B) Cucumber
+    C) JUnit
+    D) JIRA
 
-85. How can you retry failed tests automatically in TestNG?
-    A) Implement `IRetryAnalyzer` interface
-    B) Use `@Retry` annotation
-    C) Use Selenium default retry
-    D) Not possible
+93. Which command is used to navigate forward?
+    A) driver.forward()
+    B) driver.navigate().forward()
+    C) driver.goForward()
+    D) driver.window().forward()
 
-86. How can you handle custom dropdowns without `<select>` tags?
-    A) Click dropdown, locate options, click desired option
-    B) Use JavaScript Executor
-    C) Use Actions class if needed
-    D) All of the above
+94. Which WebDriver method resizes browser window?
+    A) driver.manage().window().setSize()
+    B) driver.resize()
+    C) driver.setDimension()
+    D) driver.windowResize()
 
-87. How do you handle multiple dynamic popups appearing at once?
-    A) Wait for one popup, handle it, then check for others
-    B) Use `driver.switchTo().alert()` in try-catch
-    C) Loop through known popup locators
-    D) All of the above
+95. Which exception is thrown if element is not found?
+    A) ElementNotFoundException
+    B) NoSuchElementException
+    C) TimeoutException
+    D) NotFoundException
 
-88. How can you take full-page screenshots in Selenium?
-    A) Use AShot library
-    B) Use Firefox full-page screenshot capability
-    C) Use JavaScript to scroll and stitch screenshots
-    D) All of the above
+96. Which of the following is NOT a WebDriver navigation command?
+    A) to()
+    B) back()
+    C) forward()
+    D) wait()
 
-89. How can you interact with Shadow DOM elements?
-    A) Use JavaScript Executor to access shadowRoot
-    B) Selenium cannot access Shadow DOM
-    C) Use standard locators
-    D) Use Actions class
+97. Which TestNG listener tracks test start, success, failure?
+    A) ITestListener
+    B) ISuiteListener
+    C) IReporter
+    D) IAnnotationTransformer
 
-90. How do you validate file downloads in Selenium?
-    A) Check file existence in download folder
-    B) Use Robot or AutoIT to monitor download
-    C) Verify download size or content
-    D) All of the above
+98. Which Selenium component is used for recording tests?
+    A) Selenium IDE
+    B) Selenium RC
+    C) Selenium Grid
+    D) WebDriver
 
-91. How do you perform right-click, select, and type in context menu?
-    A) Use Actions class with contextClick, moveToElement, and sendKeys
-    B) Use JavaScript only
-    C) Use Robot only
-    D) Selenium cannot do it
+99. Which of the following can capture network traffic?
+    A) Selenium alone
+    B) BrowserMob Proxy
+    C) WebDriver API
+    D) None
 
-92. How can you handle dynamic sliders or drag elements?
-    A) Use Actions.dragAndDropBy()
-    B) Use Actions.clickAndHold().moveByOffset().release()
-    C) Use JavaScript Executor to set value
-    D) All of the above
-
-93. How can you handle infinite scroll pages?
-    A) Scroll using JavaScript repeatedly until end
-    B) Wait for new elements to load dynamically
-    C) Combine scrolling and explicit wait
-    D) All of the above
-
-94. How can you execute a test on multiple OS and browsers without changing code?
-    A) Use Selenium Grid or cloud services like BrowserStack/Sauce Labs
-    B) Change WebDriver paths manually
-    C) Run only locally
-    D) Not possible
-
-95. How can you handle frames inside frames (nested frames)?
-    A) Switch sequentially using `driver.switchTo().frame()`
-    B) Use XPath to locate elements directly
-    C) Use JavaScript Executor
-    D) Selenium cannot handle nested frames
-
-96. How can you perform keyboard shortcuts for multiple keys simultaneously?
-    A) Actions.keyDown().sendKeys().keyUp().perform()
-    B) Use Robot class
-    C) Send combined keys in sendKeys()
-    D) All of the above
-
-97. How can you validate dynamic CSS changes on hover or click?
-    A) Get CSS property using `element.getCssValue()`
-    B) Use explicit wait if property changes asynchronously
-    C) Use JavaScript Executor
-    D) All of the above
-
-98. How can you handle elements that appear only after scrolling inside a modal?
-    A) Scroll modal using JavaScript Executor
-    B) Use Actions.moveToElement()
-    C) Wait explicitly for element visibility
-    D) All of the above
-
-99. How do you manage test data for real-world Selenium frameworks?
-    A) Use external files like Excel, JSON, CSV
-    B) Use databases
-    C) Use property/config files
-    D) All of the above
-
-100. How can you handle flaky tests in CI/CD pipelines?
-     A) Use retries with `IRetryAnalyzer`
-     B) Implement proper waits and robust locators
-     C) Use test isolation and separate WebDriver instances
-     D) All of the above
+100. Which WebDriver method closes all browser windows?
+     A) close()
+     B) quit()
+     C) exit()
+     D) shutdown()
