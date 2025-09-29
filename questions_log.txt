@@ -1,0 +1,650 @@
+[
+  {
+    "questionText": "Which WebDriver method is used to fetch the current URL of the page?",
+    "options": [
+      "A) `getTitle()`",
+      "B) `getCurrentUrl()`",
+      "C) `getPageSource()`",
+      "D) `navigate().to()`"
+    ]
+  },
+  {
+    "questionText": "What is the difference between `driver.close()` and `driver.quit()`?",
+    "options": [
+      "A) `close()` closes all windows, `quit()` closes only current window",
+      "B) `close()` closes the current window, `quit()` closes all windows and ends session",
+      "C) Both are the same",
+      "D) `quit()` only clears cookies"
+    ]
+  },
+  {
+    "questionText": "Which of the following statements is true about WebDriver?",
+    "options": [
+      "A) WebDriver can handle AJAX elements implicitly",
+      "B) WebDriver directly interacts with the browser without using JavaScript",
+      "C) WebDriver cannot interact with multiple windows",
+      "D) WebDriver always requires Selenium Grid"
+    ]
+  },
+  {
+    "questionText": "What is the default timeout for implicit waits in Selenium?",
+    "options": [
+      "A) 0 seconds",
+      "B) 10 seconds",
+      "C) 5 seconds",
+      "D) There is no default; it must be set"
+    ]
+  },
+  {
+    "questionText": "Which command will retrieve the page source of the current page?",
+    "options": [
+      "A) `getPageSource()`",
+      "B) `getCurrentPage()`",
+      "C) `getSource()`",
+      "D) `getHTML()`"
+    ]
+  },
+  {
+    "questionText": "Which of the following is the fastest locator in Selenium?",
+    "options": [
+      "A) CSS Selector",
+      "B) XPath",
+      "C) ID",
+      "D) Class Name"
+    ]
+  },
+  {
+    "questionText": "What is the major disadvantage of using XPath in Selenium?",
+    "options": [
+      "A) It is not supported in Chrome",
+      "B) It cannot locate elements inside frames",
+      "C) XPath is slower and brittle for dynamic elements",
+      "D) It only works with text nodes"
+    ]
+  },
+  {
+    "questionText": "How can you select a checkbox if it is not already selected?",
+    "options": [
+      "A) `checkbox.click()`",
+      "B) `checkbox.isSelected()`",
+      "C) `checkbox.getText()`",
+      "D) `checkbox.select()`"
+    ]
+  },
+  {
+    "questionText": "Which locator can be used to find an element with a partial match of an attribute?",
+    "options": [
+      "A) XPath with `contains()`",
+      "B) CSS Selector with `^=` or `$=`",
+      "C) Both A and B",
+      "D) None of the above"
+    ]
+  },
+  {
+    "questionText": "To find all matching elements on a page, which WebDriver method should be used?",
+    "options": [
+      "A) `findElement()`",
+      "B) `findElements()`",
+      "C) `getElements()`",
+      "D) `fetchElements()`"
+    ]
+  },
+  {
+    "questionText": "What is the difference between implicit and explicit waits?",
+    "options": [
+      "A) Implicit wait is applied globally; explicit wait is applied to specific elements",
+      "B) Implicit wait waits for conditions; explicit wait waits only for element presence",
+      "C) Both are global waits",
+      "D) Explicit wait is faster than implicit wait by default"
+    ]
+  },
+  {
+    "questionText": "Which class is used to implement explicit waits in Selenium?",
+    "options": [
+      "A) `WebDriverWait`",
+      "B) `WaitManager`",
+      "C) `ExpectedCondition`",
+      "D) `FluentWait`"
+    ]
+  },
+  {
+    "questionText": "How can you ignore exceptions while waiting for a condition in explicit wait?",
+    "options": [
+      "A) `ignoring(NoSuchElementException.class)`",
+      "B) `catch(NoSuchElementException)`",
+      "C) `try-catch` block only",
+      "D) Selenium does not support ignoring exceptions"
+    ]
+  },
+  {
+    "questionText": "Which wait is recommended for handling dynamically loaded content?",
+    "options": [
+      "A) Implicit wait",
+      "B) Explicit wait",
+      "C) Thread.sleep()",
+      "D) No wait is needed"
+    ]
+  },
+  {
+    "questionText": "How can you wait for a specific element to be clickable?",
+    "options": [
+      "A) `ExpectedConditions.visibilityOf(element)`",
+      "B) `ExpectedConditions.elementToBeClickable(element)`",
+      "C) `ExpectedConditions.presenceOfElementLocated()`",
+      "D) `ExpectedConditions.textToBePresentInElement()`"
+    ]
+  },
+  {
+    "questionText": "Which TestNG annotation is used to run a method before all tests in a class?",
+    "options": [
+      "A) `@BeforeMethod`",
+      "B) `@BeforeClass`",
+      "C) `@BeforeTest`",
+      "D) `@BeforeSuite`"
+    ]
+  },
+  {
+    "questionText": "How do you run TestNG tests in parallel?",
+    "options": [
+      "A) Use `parallel=\"methods\"` or `parallel=\"classes\"` in testng.xml",
+      "B) Use `@Parallel` annotation",
+      "C) Selenium automatically parallelizes tests",
+      "D) Use `Thread.sleep()`"
+    ]
+  },
+  {
+    "questionText": "What is the correct way to assert equality in TestNG?",
+    "options": [
+      "A) `Assert.equals(actual, expected)`",
+      "B) `Assert.assertEquals(actual, expected)`",
+      "C) `assert.equal(actual, expected)`",
+      "D) `Assert.eq(actual, expected)`"
+    ]
+  },
+  {
+    "questionText": "Which TestNG annotation is used to skip a test conditionally?",
+    "options": [
+      "A) `@SkipTest`",
+      "B) `@Ignore`",
+      "C) `throw SkipException`",
+      "D) `@Disabled`"
+    ]
+  },
+  {
+    "questionText": "How can you ensure a method runs after all tests in a class in TestNG?",
+    "options": [
+      "A) `@AfterTest`",
+      "B) `@AfterSuite`",
+      "C) `@AfterClass`",
+      "D) `@AfterMethod`"
+    ]
+  },
+  {
+    "questionText": "What is the main purpose of Selenium Grid?",
+    "options": [
+      "A) To run tests sequentially on one machine",
+      "B) To execute tests on multiple browsers, OS, and machines in parallel",
+      "C) To debug WebDriver scripts",
+      "D) To generate test reports automatically"
+    ]
+  },
+  {
+    "questionText": "Which component of Selenium Grid acts as a central point to manage nodes?",
+    "options": [
+      "A) Hub",
+      "B) Node",
+      "C) Registry",
+      "D) Server"
+    ]
+  },
+  {
+    "questionText": "How can you specify which browser a node should run on in Selenium Grid?",
+    "options": [
+      "A) Using `DesiredCapabilities`",
+      "B) Using `WebDriverWait`",
+      "C) Using `Actions` class",
+      "D) Using TestNG annotations"
+    ]
+  },
+  {
+    "questionText": "Which of the following statements is true for parallel execution in TestNG?",
+    "options": [
+      "A) `parallel=\"tests\"` runs multiple classes in parallel",
+      "B) `parallel=\"methods\"` runs multiple test methods in parallel",
+      "C) `parallel=\"classes\"` runs multiple classes in parallel",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "What is a common issue when running Selenium tests in parallel?",
+    "options": [
+      "A) Element locators fail due to dynamic content",
+      "B) Tests may interfere if using the same WebDriver instance",
+      "C) Implicit waits fail",
+      "D) Alerts are ignored automatically"
+    ]
+  },
+  {
+    "questionText": "How can you avoid WebDriver instance conflicts in parallel execution?",
+    "options": [
+      "A) Use separate WebDriver instances for each thread",
+      "B) Use `ThreadLocal<WebDriver>`",
+      "C) Initialize WebDriver in `@BeforeMethod`",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "Which file is typically used to configure parallel execution in TestNG?",
+    "options": [
+      "A) testng.xml",
+      "B) pom.xml",
+      "C) selenium-config.xml",
+      "D) grid-config.xml"
+    ]
+  },
+  {
+    "questionText": "How can you run Selenium tests on multiple browser versions using Grid?",
+    "options": [
+      "A) By registering nodes with different browser versions",
+      "B) By changing the WebDriver version in the code",
+      "C) By using Thread.sleep()",
+      "D) Selenium automatically detects browser versions"
+    ]
+  },
+  {
+    "questionText": "A button on the page has a dynamic ID that changes every refresh. Which locator is most reliable?",
+    "options": [
+      "A) XPath using `contains()` or `starts-with()`",
+      "B) CSS Selector with exact ID",
+      "C) Class name",
+      "D) Tag name"
+    ]
+  },
+  {
+    "questionText": "A test fails intermittently because the element is not interactable immediately. What is the best solution?",
+    "options": [
+      "A) Use `Thread.sleep(5000)`",
+      "B) Use explicit wait with `elementToBeClickable`",
+      "C) Use implicit wait",
+      "D) Ignore the failure"
+    ]
+  },
+  {
+    "questionText": "While handling a modal popup, the test sometimes throws `NoSuchElementException`. What can you do?",
+    "options": [
+      "A) Add an explicit wait for the popup",
+      "B) Switch to the modal frame if needed",
+      "C) Ensure the element locator is correct",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "You are automating a table where rows are generated dynamically. How can you click a specific row?",
+    "options": [
+      "A) Locate the row using XPath with dynamic index",
+      "B) Iterate through all rows and match cell text",
+      "C) Use JavaScript Executor to click",
+      "D) Both B and C"
+    ]
+  },
+  {
+    "questionText": "A test fails on CI server but passes locally. What could be the reason?",
+    "options": [
+      "A) Differences in browser versions",
+      "B) Timing issues and environment differences",
+      "C) Missing resources or configurations on CI",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you handle elements that appear after scrolling?",
+    "options": [
+      "A) Use `Actions.moveToElement()`",
+      "B) Use JavaScript `scrollIntoView()`",
+      "C) Wait for element to be visible after scroll",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "Your test needs to interact with a dynamically loaded dropdown. What is the best approach?",
+    "options": [
+      "A) Use explicit wait for dropdown options",
+      "B) Click the dropdown, wait, then select the option",
+      "C) Use JavaScript Executor if standard click fails",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How do you deal with flaky tests caused by network delays in AJAX-heavy pages?",
+    "options": [
+      "A) Increase implicit wait",
+      "B) Implement robust explicit waits for AJAX completion",
+      "C) Retry tests automatically",
+      "D) Both B and C"
+    ]
+  },
+  {
+    "questionText": "An element is present in the DOM but Selenium throws `ElementClickInterceptedException`. What is the solution?",
+    "options": [
+      "A) Use `Actions.moveToElement()` before clicking",
+      "B) Ensure no overlay or popup blocks the element",
+      "C) Use JavaScript Executor click",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you validate a tooltip text that appears on hover?",
+    "options": [
+      "A) Use `Actions.moveToElement()` to hover",
+      "B) Get `title` attribute or visible tooltip text",
+      "C) Use explicit wait if tooltip is dynamic",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "While automating file upload, standard `sendKeys()` doesn’t work. What can you do?",
+    "options": [
+      "A) Use Robot class to handle OS-level file dialog",
+      "B) Use JavaScript Executor",
+      "C) Use AutoIT or similar tool",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "A test must handle a CAPTCHA. How can you approach it?",
+    "options": [
+      "A) Skip CAPTCHA in automated tests",
+      "B) Use third-party CAPTCHA solving service",
+      "C) Mock the CAPTCHA in test environment",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "Your test needs to capture a screenshot of a specific element, not the full page. How can you do it?",
+    "options": [
+      "A) Use `element.getScreenshotAs()`",
+      "B) Use JavaScript Executor",
+      "C) Crop full-page screenshot using image library",
+      "D) Both A and C"
+    ]
+  },
+  {
+    "questionText": "Which approach helps reduce flaky tests in Selenium frameworks?",
+    "options": [
+      "A) Avoid using Thread.sleep()",
+      "B) Implement proper waits",
+      "C) Use Page Object Model",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you perform a right-click and select an option from the context menu?",
+    "options": [
+      "A) `Actions.contextClick(element).perform()` and then locate menu item",
+      "B) Use JavaScript Executor only",
+      "C) Use `driver.rightClick()`",
+      "D) Not possible in Selenium"
+    ]
+  },
+  {
+    "questionText": "How can you switch to the last opened window dynamically?",
+    "options": [
+      "A) Get all window handles and switch to the last one in the set",
+      "B) Use `driver.switchTo().lastWindow()`",
+      "C) Use `driver.switchTo().window(\"last\")`",
+      "D) Selenium handles it automatically"
+    ]
+  },
+  {
+    "questionText": "How can you perform multiple key presses simultaneously (like CTRL + A)?",
+    "options": [
+      "A) `Actions.keyDown(Keys.CONTROL).sendKeys(\"a\").keyUp(Keys.CONTROL).perform()`",
+      "B) `element.sendKeys(Keys.CONTROL + \"a\")`",
+      "C) `Robot.keyPress()` only",
+      "D) Selenium does not support it"
+    ]
+  },
+  {
+    "questionText": "A test fails because a new element overlays the expected element. What is the solution?",
+    "options": [
+      "A) Wait for overlay to disappear",
+      "B) Use `Actions.moveToElement()`",
+      "C) Use JavaScript click",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you execute JavaScript in Selenium?",
+    "options": [
+      "A) `JavascriptExecutor js = (JavascriptExecutor) driver; js.executeScript(\"script\")`",
+      "B) `driver.runJS(\"script\")`",
+      "C) `driver.executeJavaScript(\"script\")`",
+      "D) Selenium cannot execute JavaScript"
+    ]
+  },
+  {
+    "questionText": "How can you scroll to the bottom of a page dynamically?",
+    "options": [
+      "A) Use `JavascriptExecutor.scrollTo(0, document.body.scrollHeight)`",
+      "B) Use `Actions.moveToElement(lastElement)`",
+      "C) Use `driver.scrollToBottom()`",
+      "D) Both A and B"
+    ]
+  },
+  {
+    "questionText": "How can you verify if an element is enabled before clicking?",
+    "options": [
+      "A) `element.isEnabled()`",
+      "B) `element.isDisplayed()`",
+      "C) `element.isSelected()`",
+      "D) Selenium clicks anyway"
+    ]
+  },
+  {
+    "questionText": "How do you handle dynamically generated checkboxes with the same class name?",
+    "options": [
+      "A) Use XPath with index or attribute filters",
+      "B) Iterate through all elements returned by `findElements()`",
+      "C) Use JavaScript Executor",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you capture network logs in Selenium?",
+    "options": [
+      "A) Use Chrome DevTools Protocol (CDP)",
+      "B) Use proxy tools like BrowserMob Proxy",
+      "C) Use Selenium WebDriver logging",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you perform double-click and right-click in the same test?",
+    "options": [
+      "A) Create separate `Actions` sequences for each action and perform",
+      "B) Selenium cannot combine actions",
+      "C) Use Robot class only",
+      "D) Use JavaScript Executor only"
+    ]
+  },
+  {
+    "questionText": "How can you validate dynamic text changes on a page?",
+    "options": [
+      "A) Use explicit wait with `textToBePresentInElement`",
+      "B) Poll element text periodically",
+      "C) Use JavaScript Executor to fetch inner text",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you wait for AJAX calls to complete?",
+    "options": [
+      "A) Poll `jQuery.active` using JavaScript Executor",
+      "B) Use explicit waits for expected elements after AJAX",
+      "C) Use Thread.sleep()",
+      "D) Both A and B"
+    ]
+  },
+  {
+    "questionText": "How can you handle dynamic tables with changing rows and columns?",
+    "options": [
+      "A) Locate table rows dynamically with XPath",
+      "B) Iterate through rows and columns to match required data",
+      "C) Use JavaScript Executor if needed",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you handle hidden elements that appear on hover?",
+    "options": [
+      "A) Use `Actions.moveToElement()`",
+      "B) Use JavaScript to make element visible",
+      "C) Wait explicitly for element to appear",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you retry failed tests automatically in TestNG?",
+    "options": [
+      "A) Implement `IRetryAnalyzer` interface",
+      "B) Use `@Retry` annotation",
+      "C) Use Selenium default retry",
+      "D) Not possible"
+    ]
+  },
+  {
+    "questionText": "How can you handle custom dropdowns without `<select>` tags?",
+    "options": [
+      "A) Click dropdown, locate options, click desired option",
+      "B) Use JavaScript Executor",
+      "C) Use Actions class if needed",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How do you handle multiple dynamic popups appearing at once?",
+    "options": [
+      "A) Wait for one popup, handle it, then check for others",
+      "B) Use `driver.switchTo().alert()` in try-catch",
+      "C) Loop through known popup locators",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you take full-page screenshots in Selenium?",
+    "options": [
+      "A) Use AShot library",
+      "B) Use Firefox full-page screenshot capability",
+      "C) Use JavaScript to scroll and stitch screenshots",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you interact with Shadow DOM elements?",
+    "options": [
+      "A) Use JavaScript Executor to access shadowRoot",
+      "B) Selenium cannot access Shadow DOM",
+      "C) Use standard locators",
+      "D) Use Actions class"
+    ]
+  },
+  {
+    "questionText": "How do you validate file downloads in Selenium?",
+    "options": [
+      "A) Check file existence in download folder",
+      "B) Use Robot or AutoIT to monitor download",
+      "C) Verify download size or content",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How do you perform right-click, select, and type in context menu?",
+    "options": [
+      "A) Use Actions class with contextClick, moveToElement, and sendKeys",
+      "B) Use JavaScript only",
+      "C) Use Robot only",
+      "D) Selenium cannot do it"
+    ]
+  },
+  {
+    "questionText": "How can you handle dynamic sliders or drag elements?",
+    "options": [
+      "A) Use Actions.dragAndDropBy()",
+      "B) Use Actions.clickAndHold().moveByOffset().release()",
+      "C) Use JavaScript Executor to set value",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you handle infinite scroll pages?",
+    "options": [
+      "A) Scroll using JavaScript repeatedly until end",
+      "B) Wait for new elements to load dynamically",
+      "C) Combine scrolling and explicit wait",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you execute a test on multiple OS and browsers without changing code?",
+    "options": [
+      "A) Use Selenium Grid or cloud services like BrowserStack/Sauce Labs",
+      "B) Change WebDriver paths manually",
+      "C) Run only locally",
+      "D) Not possible"
+    ]
+  },
+  {
+    "questionText": "How can you handle frames inside frames (nested frames)?",
+    "options": [
+      "A) Switch sequentially using `driver.switchTo().frame()`",
+      "B) Use XPath to locate elements directly",
+      "C) Use JavaScript Executor",
+      "D) Selenium cannot handle nested frames"
+    ]
+  },
+  {
+    "questionText": "How can you perform keyboard shortcuts for multiple keys simultaneously?",
+    "options": [
+      "A) Actions.keyDown().sendKeys().keyUp().perform()",
+      "B) Use Robot class",
+      "C) Send combined keys in sendKeys()",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you validate dynamic CSS changes on hover or click?",
+    "options": [
+      "A) Get CSS property using `element.getCssValue()`",
+      "B) Use explicit wait if property changes asynchronously",
+      "C) Use JavaScript Executor",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you handle elements that appear only after scrolling inside a modal?",
+    "options": [
+      "A) Scroll modal using JavaScript Executor",
+      "B) Use Actions.moveToElement()",
+      "C) Wait explicitly for element visibility",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How do you manage test data for real-world Selenium frameworks?",
+    "options": [
+      "A) Use external files like Excel, JSON, CSV",
+      "B) Use databases",
+      "C) Use property/config files",
+      "D) All of the above"
+    ]
+  },
+  {
+    "questionText": "How can you handle flaky tests in CI/CD pipelines?",
+    "options": [
+      "A) Use retries with `IRetryAnalyzer`",
+      "B) Implement proper waits and robust locators",
+      "C) Use test isolation and separate WebDriver instances",
+      "D) All of the above"
+    ]
+  }
+]

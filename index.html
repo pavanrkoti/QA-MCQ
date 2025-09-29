@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MCQ Mock Test</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>MCQ Mock Test</h1>
+    
+    <label for="numQuestions">Select number of questions:</label>
+    <select id="numQuestions">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    <br><br>
+
+    <button id="startBtn">Start Test</button>
+    
+    <div id="quizContainer" style="display:none;">
+        <div id="progressContainer">
+            <div id="progressText">Question 1 of 10</div>
+            <div id="progressBar">
+                <div id="progressFill"></div>
+            </div>
+        </div>
+        <div id="timerContainer">
+            Time Left: <span id="timer">30</span> seconds
+        </div>
+        <div id="questionArea"></div>
+        <button id="skipBtn">Skip</button>
+        <button id="nextBtn">Submit & Next</button>
+        <button id="cancelBtn">Cancel Test</button>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
